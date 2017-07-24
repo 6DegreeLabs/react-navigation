@@ -1,7 +1,7 @@
 /* @flow */
 
 import React, { PureComponent } from 'react';
-import { Animated, TouchableWithoutFeedback, StyleSheet } from 'react-native';
+import { Animated, TouchableWithoutFeedback, StyleSheet, View} from 'react-native';
 import TabBarIcon from './TabBarIcon';
 
 import type {
@@ -138,6 +138,7 @@ export default class TabBarBottom extends PureComponent<
     // Prepend '-1', so there are always at least 2 items in inputRange
     const inputRange = [-1, ...routes.map((x: *, i: number) => i)];
     return (
+			<View style={[styles.tabBarWrapper]}>
       <Animated.View style={[styles.tabBar, style]}>
         {routes.map((route: NavigationRoute, index: number) => {
           const focused = index === navigation.state.index;
@@ -172,11 +173,17 @@ export default class TabBarBottom extends PureComponent<
           );
         })}
       </Animated.View>
+			</View>
     );
   }
 }
 
 const styles = StyleSheet.create({
+	tabBarWrapper:{
+		paddingHorizontal:8,
+		paddingBottom:8,
+		shadowColor:'grey',shadowOpacity:0.5,shadowRadius:10, shadowOffset:{width:0,height:0}
+	}
   tabBar: {
     height: 49, // Default tab bar height in iOS 10
     flexDirection: 'row',
