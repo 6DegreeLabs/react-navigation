@@ -180,8 +180,8 @@ export default class TabBarBottom extends PureComponent<
 
 const styles = StyleSheet.create({
   tabBarWrapper:{
-  		paddingHorizontal:8,
-  		paddingBottom:8,
+  		paddingHorizontal:16,
+  		paddingBottom:16,
   		backgroundColor:'#f1f1f1'
   	},
     tabBar: {
