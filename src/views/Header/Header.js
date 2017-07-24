@@ -297,30 +297,30 @@ class Header extends React.PureComponent<void, HeaderProps, HeaderState> {
   }
 }
 
-let platformContainerStyles;
-if (Platform.OS === 'ios') {
-  platformContainerStyles = {
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: 'rgba(0, 0, 0, .3)',
-  };
-} else {
-  platformContainerStyles = {
-    shadowColor: 'black',
-    shadowOpacity: 0.1,
-    shadowRadius: StyleSheet.hairlineWidth,
-    shadowOffset: {
-      height: StyleSheet.hairlineWidth,
-    },
-    elevation: 4,
-  };
-}
+// let platformContainerStyles;
+// if (Platform.OS === 'ios') {
+//   platformContainerStyles = {
+//     borderBottomWidth: StyleSheet.hairlineWidth,
+//     borderBottomColor: 'rgba(0, 0, 0, .3)',
+//   };
+// } else {
+//   platformContainerStyles = {
+//     shadowColor: 'black',
+//     shadowOpacity: 0.1,
+//     shadowRadius: StyleSheet.hairlineWidth,
+//     shadowOffset: {
+//       height: StyleSheet.hairlineWidth,
+//     },
+//     elevation: 4,
+//   };
+// }
 
 const styles = StyleSheet.create({
   container: {
     paddingTop: STATUSBAR_HEIGHT,
     backgroundColor: '#f1f1f1',
     height: STATUSBAR_HEIGHT + APPBAR_HEIGHT,
-    ...platformContainerStyles,
+    // ...platformContainerStyles,
   },
   appBar: {
     flex: 1,
