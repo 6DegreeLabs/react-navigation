@@ -187,7 +187,6 @@ const styles = StyleSheet.create({
     tabBar: {
       height: 49, // Default tab bar height in iOS 10
       flexDirection: 'row',
-      borderTopWidth: StyleSheet.hairlineWidth,
       borderTopColor: 'rgba(0, 0, 0, .3)',
       backgroundColor: 'white', // Default background color in iOS 10
   	shadowColor:'grey',shadowOpacity:0.5,shadowRadius:10, shadowOffset:{width:0,height:0}
